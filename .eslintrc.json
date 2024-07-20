@@ -1,0 +1,56 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-native/all",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "settings": {
+    "react": {
+      "version": "18.2.0"
+    },
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@screens", "./src/screens"],
+          ["@components", "./src/components"],
+          ["@redux", "./src/redux"],
+          ["@utils", "./src/utils"],
+          ["@theme", "./src/theme"],
+          ["@UI", "./src/UI"]
+        ],
+        "extensions": [".ts", ".tsx", ".js", ".jsx", ".json"]
+      }
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./"
+  },
+  "plugins": ["react", "react-native", "prettier", "@typescript-eslint"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-undef": "off",
+    "no-console": "warn",
+    "react-native/no-unused-styles": "off",
+    "react-native/no-inline-styles": 0,
+    "linebreak-style": "off",
+    "react/prop-types": 0,
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "@typescript-eslint/no-explicit-any": "warn"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "globals": {
+    "React": "writable",
+    "ReactNative": "writable"
+  }
+}
