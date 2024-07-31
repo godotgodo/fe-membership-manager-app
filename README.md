@@ -15,7 +15,7 @@ The application is currently under development.
 
 ## Back-End
 
-You can find the back-end part here.
+You can find the back-end part [here](https://github.com/godotgodo/be-membership-manager-app).
 
 ## Figma Design
 
