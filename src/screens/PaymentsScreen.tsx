@@ -1,13 +1,13 @@
 import React from 'react';
-import Home from '@components/Home';
 import ScreenWrapper from '@components/shared/ScreenWrapper';
+import Payments from '@components/Payments';
 
-const HomeScreen = () => {
+const PaymentsScreen = () => {
   return (
     <ScreenWrapper>
-      <Home />
+      <Payments />
     </ScreenWrapper>
   );
 };
 
-export default HomeScreen;
+export default PaymentsScreen;

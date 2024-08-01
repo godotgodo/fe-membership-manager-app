@@ -1,13 +1,13 @@
 import React from 'react';
-import Home from '@components/Home';
 import ScreenWrapper from '@components/shared/ScreenWrapper';
+import Members from '@components/Members';
 
-const HomeScreen = () => {
+const MembersScreen = () => {
   return (
     <ScreenWrapper>
-      <Home />
+      <Members />
     </ScreenWrapper>
   );
 };
 
-export default HomeScreen;
+export default MembersScreen;
