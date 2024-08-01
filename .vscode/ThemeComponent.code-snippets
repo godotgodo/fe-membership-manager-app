@@ -1,0 +1,47 @@
+{
+  // Place your fe-membership-manager-app workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  "React Native Functional Component with Theme": {
+    "prefix": "rnfet",
+    "body": [
+      "import { StyleSheet, Text, View } from 'react-native';",
+      "import React from 'react';",
+      "import { useTheme } from '@theme/ThemeContext';",
+      "",
+      "const ${TM_FILENAME_BASE}: React.FC = () => {",
+      "  const { theme } = useTheme();",
+      "  const styles = createStyles(theme);",
+      "",
+      "  return (",
+      "    <View style={styles.container}>",
+      "      <Text style={styles.text}>Hello, themed world!</Text>",
+      "    </View>",
+      "  );",
+      "};",
+      "",
+      "const createStyles = (theme: Theme) => {",
+      "  const styles = StyleSheet.create({",
+      "    container: {",
+      "      alignItems: 'center',",
+      "      backgroundColor: theme.background,",
+      "      flex: 1,",
+      "      justifyContent: 'center',",
+      "    },",
+      "    text: {",
+      "      color: theme.text,",
+      "      fontSize: 16,",
+      "    },",
+      "  });",
+      "  return styles;",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE};",
+    ],
+    "description": "Creates a functional React Native component with theme support, focusing on theme-based styling.",
+  },
+}
