@@ -11,7 +11,7 @@ const ScreenWrapper: React.FC<ScreenWrapperProps> = ({ children }) => {
 
   return (
     <SafeAreaView
-      style={[styles.container, { backgroundColor: theme.background }]}
+      style={[styles.safeArea, { backgroundColor: theme.background }]}
     >
       {children}
     </SafeAreaView>
@@ -19,10 +19,8 @@ const ScreenWrapper: React.FC<ScreenWrapperProps> = ({ children }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
+  safeArea: {
     flex: 1,
-    justifyContent: 'center',
   },
 });
 
