@@ -12,16 +12,30 @@ import MembersScreen from '@screens/MembersScreen';
 import PaymentsScreen from '@screens/PaymentsScreen';
 import { Image } from 'react-native';
 
-const Stack = createNativeStackNavigator();
+type RootStackParamList = {
+  Home: undefined;
+  Login: undefined;
+  Signup: undefined;
+  Courses: undefined;
+  CoursesList: undefined;
+  CourseDetail: undefined;
+  LessonAttendance: undefined;
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator();
 
 const CoursesStackNavigator: React.FC = () => {
   return (
     <Stack.Navigator
-      initialRouteName="Courses"
+      initialRouteName="CoursesList"
       screenOptions={{ headerShown: false }}
     >
-      <Stack.Screen name="Courses" component={CoursesScreen} />
+      <Stack.Screen
+        name="CoursesList"
+        options={{ headerTitle: 'Courses' }}
+        component={CoursesScreen}
+      />
       <Stack.Screen name="CourseDetail" component={CourseDetailScreen} />
       <Stack.Screen
         name="LessonAttendance"
@@ -32,7 +46,7 @@ const CoursesStackNavigator: React.FC = () => {
 };
 
 const AppNavigator: React.FC = () => {
-  const isLoggedIn = true;
+  const isLoggedIn = false;
 
   return (
     <NavigationContainer>
