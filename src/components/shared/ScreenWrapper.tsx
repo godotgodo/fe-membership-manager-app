@@ -1,6 +1,7 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { useTheme } from '@theme/ThemeContext';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 type ScreenWrapperProps = {
   children: React.ReactNode;
