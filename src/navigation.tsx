@@ -94,7 +94,11 @@ const AppNavigator: React.FC = () => {
         </Tab.Navigator>
       ) : (
         <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen
+            name="Home"
+            options={{ headerShown: false }}
+            component={HomeScreen}
+          />
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Signup" component={SignupScreen} />
         </Stack.Navigator>
