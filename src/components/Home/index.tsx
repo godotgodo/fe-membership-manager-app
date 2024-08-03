@@ -12,7 +12,7 @@ const index: React.FC = () => {
   return (
     <View style={styles.container}>
       <View style={styles.loginImageContainer}>
-        <Image source={require('../../../assets/login.png')} />
+        <Image source={require('../../../assets/membership.png')} />
       </View>
       <View style={styles.waveImageContainer}>
         <ImageBackground
@@ -65,7 +65,7 @@ const createStyles = (theme: Theme) => {
       fontWeight: 'bold',
     },
     loginImageContainer: {
-      margin: '10%',
+      marginTop: '30%',
     },
     waveImage: {
       alignItems: 'center',
