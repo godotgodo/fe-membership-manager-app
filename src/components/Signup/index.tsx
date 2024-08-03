@@ -1,17 +1,32 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import ToggleTheme from '@components/shared/ToggleTheme';
+import { useTheme } from '@theme/ThemeContext';
 
-const index = () => {
+const Signup: React.FC = () => {
+  const { theme } = useTheme();
+  const styles = createStyles(theme);
+
   return (
-    <View>
-      <View>
-        <Text>SIGNUP</Text>
-      </View>
+    <View style={styles.container}>
+      <Text style={styles.text}>Hello, themed signup world!</Text>
     </View>
   );
 };
 
-export default index;
+const createStyles = (theme: Theme) => {
+  const styles = StyleSheet.create({
+    container: {
+      alignItems: 'center',
+      backgroundColor: theme.background,
+      flex: 1,
+      justifyContent: 'center',
+    },
+    text: {
+      color: theme.text,
+      fontSize: 16,
+    },
+  });
+  return styles;
+};
 
-const styles = StyleSheet.create({});
+export default Signup;
